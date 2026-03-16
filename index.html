@@ -149,10 +149,10 @@
     .pricing-cta { text-align: center; }
 
     /* FOOTER CTA */
-    .footer-cta { padding: 84px 24px; background: linear-gradient(135deg, #0090c8 0%, #00AEEF 45%, #007fb5 100%); text-align: center; position: relative; overflow: hidden; }
-    .footer-cta::before { content: ''; position: absolute; inset: 0; opacity: 0.5; background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
+    .footer-cta { padding: 84px 24px; background: #0a1628; border-top: 1px solid rgba(0,174,239,0.15); text-align: center; position: relative; overflow: hidden; }
+    .footer-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,174,239,0.07) 0%, transparent 70%); pointer-events: none; }
     .footer-cta h2 { font-size: clamp(26px, 4.5vw, 48px); font-weight: 800; letter-spacing: -1px; color: #fff; margin-bottom: 12px; position: relative; }
-    .footer-cta p { font-size: 17px; color: rgba(255,255,255,0.82); margin-bottom: 32px; position: relative; }
+    .footer-cta p { font-size: 17px; color: rgba(255,255,255,0.55); margin-bottom: 32px; position: relative; }
     .btn-cta-white { background: #fff; color: #007fb5; font-size: 16px; font-weight: 700; padding: 16px 36px; border-radius: 14px; box-shadow: 0 8px 32px rgba(0,0,0,0.2); display: inline-flex; align-items: center; gap: 8px; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; position: relative; }
     .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 14px 44px rgba(0,0,0,0.28); }
 
@@ -418,22 +418,46 @@
     <p class="section-label" style="text-align:center">Pricing</p>
     <h2>Simple pricing. No surprises.</h2>
     <p class="pricing-sub">2-day free trial &#183; No credit card required</p>
-    <div class="pricing-dmv">
-      <span>&#127881; DMV Dream families get 30 days free with code <strong>DMVDREAM</strong></span>
-    </div>
     <div class="pricing-cards">
       <div class="pricing-card fade-up">
         <div class="plan-name">Starter</div>
         <div class="plan-price">$39<span>/mo</span></div>
+        <ul style="list-style:none;margin:0 0 24px;padding:0;text-align:left;">
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">N.I.K.K.I. Voice Calls</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">10 Target Schools</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">1 Email Sequence</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">5 Social Posts/month</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">Calendar Sync</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">AI Recruiting Report</span></li>
+        </ul>
+        <a href="https://www.nextplayrecruiting.app/pricing" class="btn btn-outline" style="width:100%;text-align:center;justify-content:center;">Get Started &#8594;</a>
       </div>
       <div class="pricing-card popular fade-up" style="animation-delay:0.1s">
         <div class="popular-badge">MOST POPULAR</div>
         <div class="plan-name">Pro</div>
         <div class="plan-price">$59<span>/mo</span></div>
+        <ul style="list-style:none;margin:0 0 24px;padding:0;text-align:left;">
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">Everything in Starter</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">25 Target Schools</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">3 Email Sequences</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">20 Social Posts/month</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">N.I.K.K.I. SMS</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">Priority Support</span></li>
+        </ul>
+        <a href="https://www.nextplayrecruiting.app/pricing" class="btn btn-primary" style="width:100%;text-align:center;justify-content:center;">Get Started &#8594;</a>
       </div>
       <div class="pricing-card fade-up" style="animation-delay:0.2s">
         <div class="plan-name">Elite</div>
         <div class="plan-price">$75<span>/mo</span></div>
+        <ul style="list-style:none;margin:0 0 24px;padding:0;text-align:left;">
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">Everything in Pro</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">Unlimited Schools</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">Unlimited Sequences</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">Unlimited Social Posts</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">Personal Onboarding Call</span></li>
+        <li style="display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><svg style="flex-shrink:0;margin-top:2px" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(0,174,239,0.15)"/><polyline points="3.5,7 6,9.5 10.5,4.5" stroke="#00AEEF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.4;">SMS + Voice Outreach</span></li>
+        </ul>
+        <a href="https://www.nextplayrecruiting.app/pricing" class="btn btn-outline" style="width:100%;text-align:center;justify-content:center;">Get Started &#8594;</a>
       </div>
     </div>
     <p class="pricing-trial">All plans include a free trial. Cancel anytime from your billing page.</p>
@@ -447,7 +471,7 @@
 <section class="footer-cta">
   <h2>Your athlete&#8217;s journey starts now.</h2>
   <p>Join families across the DMV who are recruiting smarter with NextPlay.</p>
-  <a href="https://www.nextplayrecruiting.app/signup" class="btn-cta-white">Get Started Free &#8594;</a>
+  <a href="https://www.nextplayrecruiting.app/signup" class="btn btn-primary" style="font-size:16px;padding:15px 36px;">Get Started Free &#8594;</a>
 </section>
 
 <!-- FOOTER -->
