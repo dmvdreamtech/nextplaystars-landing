@@ -13,7 +13,7 @@ const items = [
     body: "A serious recruiting effort means personalized outreach to 50\u2013100 coaches, multiple follow-ups, video updates, profile maintenance, phone calls, social posts, and campus visits. Most families underestimate the work by an order of magnitude.",
     photo: "/photos/parent-phone.jpg",
     photoAlt: "Parent working through recruiting outreach on their phone",
-    photoPosition: "20% center",
+    photoPosition: "0% center",
   },
   {
     num: "03",
