@@ -91,154 +91,24 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT: N.I.K.K.I. conversation panel */}
+          {/* RIGHT: Hero photo */}
           <div
             className="relative w-full order-first lg:order-last animate-fade-up"
             style={{ animationDelay: "80ms" }}
           >
-            <div
-              className="relative w-full rounded-2xl overflow-hidden flex flex-col"
-              style={{ aspectRatio: "4/5", maxHeight: "560px", background: "linear-gradient(155deg, #0d1f38 0%, #0F1B2E 60%, #0a1422 100%)" }}
-            >
-              {/* Background swoosh — very subtle */}
-              <svg
-                aria-hidden
-                viewBox="0 0 480 600"
-                fill="none"
-                className="absolute inset-0 w-full h-full"
-                preserveAspectRatio="xMidYMid slice"
-              >
-                <path d="M-60 480 C80 320, 280 200, 540 80" stroke="rgba(0,172,240,0.12)" strokeWidth="1.5" fill="none" />
-                <ellipse cx="420" cy="80" rx="160" ry="160" fill="url(#hero-conv-glow)" />
-                <defs>
-                  <radialGradient id="hero-conv-glow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#00ACF0" stopOpacity="0.10" />
-                    <stop offset="100%" stopColor="#00ACF0" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-              </svg>
-
-              {/* Header bar */}
-              <div
-                className="relative flex items-center gap-3 px-6 py-4 flex-shrink-0"
-                style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}
-              >
-                <div
-                  style={{
-                    width: "36px",
-                    height: "36px",
-                    borderRadius: "50%",
-                    background: "linear-gradient(135deg, #00ACF0 0%, #0077b6 100%)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                  }}
-                >
-                  <span className="font-display text-white" style={{ fontSize: "13px", fontWeight: 700 }}>N</span>
-                </div>
-                <div>
-                  <p className="font-body text-white" style={{ fontSize: "14px", fontWeight: 600, lineHeight: 1 }}>N.I.K.K.I.</p>
-                  <p className="font-body text-[#00ACF0]" style={{ fontSize: "11px", marginTop: "3px" }}>● Active now</p>
-                </div>
-                <div className="ml-auto">
-                  <p className="font-body text-white/20" style={{ fontSize: "10px", letterSpacing: "0.08em", textTransform: "uppercase" }}>NextPlay</p>
-                </div>
-              </div>
-
-              {/* Messages */}
-              <div className="relative flex flex-col justify-center flex-1 px-6 py-8 gap-4">
-                <p
-                  className="font-body text-white/20 text-center"
-                  style={{ fontSize: "10px", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "4px" }}
-                >
-                  Today · 3:42 PM
-                </p>
-
-                {/* Parent bubble */}
-                <div className="flex justify-end">
-                  <div
-                    className="font-body text-white"
-                    style={{
-                      background: "rgba(0,172,240,0.18)",
-                      border: "1px solid rgba(0,172,240,0.25)",
-                      borderRadius: "18px 18px 4px 18px",
-                      padding: "12px 16px",
-                      maxWidth: "80%",
-                      fontSize: "15px",
-                      lineHeight: 1.45,
-                    }}
-                  >
-                    Peyton just hit a home run at the showcase.
-                  </div>
-                </div>
-
-                {/* N.I.K.K.I. bubble */}
-                <div className="flex items-end gap-2">
-                  <div
-                    style={{
-                      width: "28px",
-                      height: "28px",
-                      borderRadius: "50%",
-                      background: "linear-gradient(135deg, #00ACF0 0%, #0077b6 100%)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                      marginBottom: "2px",
-                    }}
-                  >
-                    <span className="font-display text-white" style={{ fontSize: "10px", fontWeight: 700 }}>N</span>
-                  </div>
-                  <div>
-                    <p className="font-body text-white/30" style={{ fontSize: "11px", marginBottom: "5px" }}>N.I.K.K.I.</p>
-                    <div
-                      className="font-body text-white/85"
-                      style={{
-                        background: "rgba(255,255,255,0.06)",
-                        border: "1px solid rgba(255,255,255,0.08)",
-                        borderRadius: "4px 18px 18px 18px",
-                        padding: "12px 16px",
-                        fontSize: "15px",
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      I&apos;ll draft updates to your target coach list for your approval.{" "}
-                      <span style={{ color: "#00ACF0" }}>Calendar updated</span> with her next tournament.
-                    </div>
-                  </div>
-                </div>
-
-                {/* Input bar */}
-                <div
-                  className="flex items-center gap-3 mt-auto"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    borderRadius: "24px",
-                    padding: "11px 18px",
-                    marginTop: "20px",
-                  }}
-                >
-                  <p className="font-body text-white/20 flex-1" style={{ fontSize: "14px" }}>Message N.I.K.K.I…</p>
-                  <div
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      borderRadius: "50%",
-                      background: "#00ACF0",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
-                      <path d="M2 6h8M6 2l4 4-4 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+            <div style={{ overflow: "hidden", borderRadius: "4px" }}>
+              <img
+                src="/photos/hero-softball-pitcher.jpg"
+                alt="Softball pitcher in action during a high school game"
+                style={{
+                  width: "100%",
+                  aspectRatio: "4/5",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  display: "block",
+                  filter: "sepia(0.12) contrast(1.04) brightness(0.82)",
+                }}
+              />
             </div>
           </div>
 

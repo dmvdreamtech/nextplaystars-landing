@@ -1,5 +1,5 @@
 const chips = [
-  { label: "Coach outreach emails", detail: "drafted and sent on your behalf" },
+  { label: "Coach outreach emails", detail: "drafted for you, approved by you, sent in your athlete\u2019s voice" },
   { label: "X posts and updates", detail: "written and posted on your timeline" },
   { label: "Recruiting questions", detail: "answered 24/7 by phone or text" },
   { label: "Recruiting calendar", detail: "events added automatically" },
@@ -124,7 +124,7 @@ export default function MeetNikki() {
               className="font-body text-[#00ACF0]"
               style={{ fontSize: "11px", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600, marginBottom: "14px" }}
             >
-              N.I.K.K.I. by NextPlay
+              Your Recruiting Assistant
             </p>
             <h2
               className="font-display text-white"
@@ -136,7 +136,7 @@ export default function MeetNikki() {
                 marginBottom: "20px",
               }}
             >
-              Your recruiting assistant.<br />On it before you ask.
+              A recruiting assistant you can call. Anytime.
             </h2>
 
             {/* Use-case chips — 2-column grid */}
@@ -185,7 +185,7 @@ export default function MeetNikki() {
             </div>
 
             <p
-              className="font-body text-white/28"
+              className="font-body text-white/40"
               style={{
                 fontSize: "13px",
                 lineHeight: 1.65,
@@ -195,6 +195,7 @@ export default function MeetNikki() {
               }}
             >
               N.I.K.K.I. adds events to your recruiting calendar automatically. Call with a question anytime — you&apos;ll get a real response, not a form.
+              {" "}Every email and social post is reviewed and approved by you before it goes anywhere. Coaches hear from your athlete, not from a bot.
             </p>
           </div>
 
