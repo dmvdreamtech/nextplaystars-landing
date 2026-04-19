@@ -3,6 +3,7 @@ import Footer from "@/components/ui/Footer";
 import Hero from "@/components/sections/Hero";
 import RecruitingReality from "@/components/sections/RecruitingReality";
 import MeetNikki from "@/components/sections/MeetNikki";
+import HowItWorks from "@/components/sections/HowItWorks";
 
 export default function Home() {
   return (
@@ -11,8 +12,8 @@ export default function Home() {
       <main>
         <Hero />
         <RecruitingReality />
-        {/* Section 3: How NextPlay Works — next */}
         <MeetNikki />
+        <HowItWorks />
         {/* Section 5: Built by a coach */}
         {/* Section 6: Pricing */}
         {/* Section 7: Final CTA */}
