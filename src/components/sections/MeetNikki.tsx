@@ -145,7 +145,7 @@ export default function MeetNikki() {
                 display: "grid",
                 gridTemplateColumns: "repeat(2, 1fr)",
                 gap: "12px",
-                marginBottom: "36px",
+                marginBottom: "20px",
               }}
             >
               {chips.map(({ label, detail }) => (
@@ -166,6 +166,22 @@ export default function MeetNikki() {
                   </p>
                 </div>
               ))}
+            </div>
+
+            {/* Team photo — subtle anchor */}
+            <div style={{ overflow: "hidden", borderRadius: "6px", marginBottom: "20px", opacity: 0.45 }}>
+              <img
+                src="/photos/dmv-dream-team.jpg"
+                alt=""
+                aria-hidden
+                style={{
+                  width: "100%",
+                  aspectRatio: "16/6",
+                  objectFit: "cover",
+                  display: "block",
+                  filter: "grayscale(0.5) brightness(0.75)",
+                }}
+              />
             </div>
 
             <p

@@ -1,9 +1,4 @@
-const items = [
-  {
-    num: "01",
-    heading: "Coaches aren't looking for your athlete.",
-    body: "A D1 coach manages hundreds of recruits. Your athlete isn't in their database. Families who get recruited are the ones who put themselves in front of the right coaches — persistently, professionally, and over years. Waiting for an invitation is a strategy that doesn't work.",
-  },
+const itemsWithoutPhoto = [
   {
     num: "02",
     heading: "It's not one email. It's hundreds.",
@@ -56,7 +51,81 @@ export default function RecruitingReality() {
 
         {/* Editorial blocks */}
         <div>
-          {items.map(({ num, heading, body }, i) => (
+
+          {/* Item 01 — Option A mockup: photo left, number + text right */}
+          <div
+            style={{
+              paddingTop: "44px",
+              paddingBottom: "44px",
+              borderTop: "1px solid rgba(15,27,46,0.12)",
+            }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-10 lg:gap-16 items-start">
+
+              {/* Photo — left column */}
+              <div style={{ overflow: "hidden", borderRadius: "3px" }}>
+                <img
+                  src="/photos/coach-sideline.jpg"
+                  alt="Coach watching from the sideline during a high school game"
+                  style={{
+                    width: "100%",
+                    aspectRatio: "4/3",
+                    objectFit: "cover",
+                    display: "block",
+                    filter: "sepia(0.12) contrast(1.04) brightness(0.87)",
+                  }}
+                />
+              </div>
+
+              {/* Number + text — right column */}
+              <div>
+                <span
+                  className="font-display"
+                  style={{
+                    fontSize: "clamp(56px, 6vw, 88px)",
+                    fontWeight: 300,
+                    color: "rgba(15,27,46,0.12)",
+                    lineHeight: 1,
+                    letterSpacing: "-0.02em",
+                    display: "block",
+                    marginBottom: "16px",
+                    userSelect: "none",
+                  }}
+                  aria-hidden
+                >
+                  01
+                </span>
+                <h3
+                  className="font-display"
+                  style={{
+                    fontSize: "clamp(20px, 2.2vw, 28px)",
+                    fontWeight: 700,
+                    color: "#0F1B2E",
+                    marginBottom: "14px",
+                    lineHeight: 1.2,
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  Coaches aren&apos;t looking for your athlete.
+                </h3>
+                <p
+                  className="font-body"
+                  style={{
+                    fontSize: "16px",
+                    lineHeight: 1.75,
+                    color: "rgba(15,27,46,0.62)",
+                    maxWidth: "520px",
+                  }}
+                >
+                  A D1 coach manages hundreds of recruits. Your athlete isn&apos;t in their database. Families who get recruited are the ones who put themselves in front of the right coaches — persistently, professionally, and over years. Waiting for an invitation is a strategy that doesn&apos;t work.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Items 02 and 03 — original layout unchanged */}
+          {itemsWithoutPhoto.map(({ num, heading, body }) => (
             <div
               key={num}
               className="flex flex-col sm:grid sm:items-start"
@@ -111,6 +180,7 @@ export default function RecruitingReality() {
               </div>
             </div>
           ))}
+
           {/* Closing rule */}
           <div style={{ borderTop: "1px solid rgba(15,27,46,0.12)" }} />
         </div>
