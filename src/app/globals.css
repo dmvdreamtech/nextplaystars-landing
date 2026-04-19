@@ -51,6 +51,15 @@ body {
 @keyframes ring-spin     { to { transform: rotateX(75deg) rotateY(20deg) rotate(360deg); } }
 @keyframes ring-spin-rev { to { transform: rotateX(45deg) rotateY(60deg) rotate(-360deg); } }
 
+/* Inline external link — DMV Dream Athletics in BuiltByCoach */
+.dmv-link {
+  border-bottom: 1px solid rgba(0, 172, 240, 0.35);
+  transition: border-color 150ms ease;
+}
+.dmv-link:hover {
+  border-bottom-color: #00ACF0;
+}
+
 /* Ghost CTA button — used in BuiltByCoach, no JS needed */
 .cta-ghost {
   background: transparent;

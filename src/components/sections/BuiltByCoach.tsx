@@ -51,7 +51,23 @@ export default function BuiltByCoach() {
               className="font-body"
               style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(15,27,46,0.72)" }}
             >
-              NextPlay was built by a head varsity softball coach and the president of DMV Dream Athletics. After years of watching talented athletes get missed because their families didn&apos;t know the recruiting game, he built the platform he wished every family had.
+              NextPlay was built by Phillip Tomlin, head varsity softball coach at St. Vincent Pallotti High School and 2025 Conference Coach of the Year. Phillip is also president of{" "}
+              <a
+                href="https://www.dmvdreamsoftball.com/our-staff"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="dmv-link"
+                style={{ color: "#00ACF0", textDecoration: "none" }}
+              >
+                DMV Dream Athletics
+              </a>
+              , where he leads the competitive softball program alongside other youth sports.
+            </p>
+            <p
+              className="font-body"
+              style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(15,27,46,0.72)" }}
+            >
+              After years of watching talented athletes get missed because their families didn&apos;t know the recruiting game, he built the platform he wished every family had.
             </p>
             <p
               className="font-body"
