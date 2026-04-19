@@ -24,7 +24,7 @@ export default function FinalCTA() {
               color: "#0F1B2E",
             }}
           >
-            Give your athlete the recruiting effort she deserves.
+            Give your athlete the recruiting effort they deserve.
           </h2>
 
           <p

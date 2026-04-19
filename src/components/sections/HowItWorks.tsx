@@ -8,7 +8,7 @@ const steps = [
   {
     num: "02",
     heading: "Get a real recruiting plan.",
-    body: "A personalized report showing your athlete\u2019s fit, reach schools, target schools, and likely offers based on her actual numbers and the programs she\u2019s chasing.",
+    body: "A personalized report showing your athlete\u2019s fit, reach schools, target schools, and likely offers based on their actual numbers and the programs they\u2019re chasing.",
     trust: false,
   },
   {

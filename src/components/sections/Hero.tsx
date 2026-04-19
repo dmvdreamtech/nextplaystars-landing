@@ -225,7 +225,7 @@ export default function Hero() {
                       }}
                     >
                       I&apos;ll draft updates to your target coach list for your approval.{" "}
-                      <span style={{ color: "#00ACF0" }}>Calendar updated</span> with her next tournament.
+                      <span style={{ color: "#00ACF0" }}>Calendar updated</span> with their next tournament.
                     </div>
                   </div>
                 </div>
