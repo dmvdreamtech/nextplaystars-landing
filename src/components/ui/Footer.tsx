@@ -3,8 +3,10 @@ import Image from "next/image";
 const APP_URL = "https://www.nextplayrecruiting.app";
 
 const PRODUCT_LINKS = [
-  { label: "How It Works", href: "#how" },
+  { label: "The Reality", href: "#reality" },
   { label: "Meet N.I.K.K.I.", href: "#nikki" },
+  { label: "How It Works", href: "#how" },
+  { label: "About", href: "#founder" },
   { label: "Pricing", href: "#pricing" },
 ];
 
