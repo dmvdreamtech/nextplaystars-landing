@@ -61,7 +61,7 @@ export default function BuiltByCoach() {
               >
                 DMV Dream Athletics
               </a>
-              , where he leads the competitive softball program alongside other youth sports.
+              , where he leads the competitive softball program alongside other youth programs.
             </p>
             <p
               className="font-body"
