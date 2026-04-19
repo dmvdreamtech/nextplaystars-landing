@@ -71,6 +71,13 @@ body {
   border-color: #00ACF0;
 }
 
+/* Primary solid CTA — hero, final CTA */
+.cta-primary {
+  background: #00ACF0;
+  transition: background 150ms ease;
+}
+.cta-primary:hover { background: #0099D8; }
+
 /* Pricing CTA buttons */
 .pricing-cta-solid {
   background: #00ACF0;
