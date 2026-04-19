@@ -21,9 +21,28 @@ export default function Hero() {
 
           {/* LEFT */}
           <div className="flex flex-col items-start max-w-[640px]">
+            {/* Sport tag — signals audience immediately */}
+            <div
+              className="inline-flex items-center font-body animate-fade-up"
+              style={{
+                fontSize: "11px",
+                letterSpacing: "0.13em",
+                textTransform: "uppercase",
+                fontWeight: 600,
+                color: "#00ACF0",
+                border: "1px solid rgba(0,172,240,0.30)",
+                borderRadius: "100px",
+                padding: "5px 14px",
+                marginBottom: "22px",
+                animationDelay: "0ms",
+              }}
+            >
+              For Softball &amp; Baseball Families
+            </div>
+
             <h1
               className="font-display text-white leading-[1.08] tracking-[-0.02em] mb-5 animate-fade-up"
-              style={{ fontSize: "clamp(40px, 4.5vw, 56px)", animationDelay: "0ms", fontWeight: 700 }}
+              style={{ fontSize: "clamp(40px, 4.5vw, 56px)", animationDelay: "80ms", fontWeight: 700 }}
             >
               College recruiting isn&apos;t something that happens to your athlete.
               <br />
@@ -32,14 +51,14 @@ export default function Hero() {
 
             <p
               className="font-display text-white/50 mb-6 animate-fade-up"
-              style={{ fontSize: "clamp(20px, 2vw, 26px)", fontWeight: 400, lineHeight: 1.35, animationDelay: "60ms" }}
+              style={{ fontSize: "clamp(20px, 2vw, 26px)", fontWeight: 400, lineHeight: 1.35, animationDelay: "160ms" }}
             >
               We make sure it gets done right.
             </p>
 
             <p
               className="font-body mb-10 animate-fade-up"
-              style={{ fontSize: "17px", lineHeight: "1.65", color: "rgba(255,255,255,0.62)", maxWidth: "480px", animationDelay: "120ms" }}
+              style={{ fontSize: "17px", lineHeight: "1.65", color: "rgba(255,255,255,0.62)", maxWidth: "480px", animationDelay: "240ms" }}
             >
               Most families don&apos;t realize college coaches won&apos;t find their kid
               on their own. Recruiting takes hundreds of emails, dozens of calls,
@@ -50,7 +69,7 @@ export default function Hero() {
 
             <div
               className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto animate-fade-up"
-              style={{ animationDelay: "240ms" }}
+              style={{ animationDelay: "340ms" }}
             >
               <a
                 href={`${APP_URL}/signup`}

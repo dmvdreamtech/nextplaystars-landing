@@ -59,25 +59,25 @@ export default function RecruitingReality() {
           {items.map(({ num, heading, body }, i) => (
             <div
               key={num}
+              className="flex flex-col sm:grid sm:items-start"
               style={{
-                display: "grid",
                 gridTemplateColumns: "72px 1fr",
                 gap: "40px",
                 paddingTop: "44px",
                 paddingBottom: "44px",
                 borderTop: "1px solid rgba(15,27,46,0.12)",
-                alignItems: "start",
               }}
             >
               <span
                 className="font-display"
                 style={{
-                  fontSize: "clamp(52px, 5vw, 72px)",
+                  fontSize: "clamp(40px, 5vw, 72px)",
                   fontWeight: 300,
                   color: "rgba(15,27,46,0.15)",
                   lineHeight: 1,
                   letterSpacing: "-0.02em",
                   userSelect: "none",
+                  marginBottom: "8px",
                 }}
                 aria-hidden
               >
