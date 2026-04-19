@@ -51,7 +51,7 @@ export default function BuiltByCoach() {
               className="font-body"
               style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(15,27,46,0.72)" }}
             >
-              NextPlay was built by Phillip Tomlin, head varsity softball coach at St. Vincent Pallotti High School and 2025 Conference Coach of the Year. Phillip is also president of{" "}
+              NextPlay was built by the head varsity softball coach at St. Vincent Pallotti High School and 2025 Conference Coach of the Year. He is also president of{" "}
               <a
                 href="https://www.dmvdreamsoftball.com/our-staff"
                 target="_blank"
