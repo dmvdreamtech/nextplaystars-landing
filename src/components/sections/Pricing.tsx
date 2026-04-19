@@ -65,7 +65,7 @@ const tiers = [
     cta: "Contact Us",
     href: "mailto:support@nextplaystars.com",
   },
-] as const;
+];
 
 export default function Pricing() {
   return (
