@@ -30,16 +30,16 @@ export default function Nav() {
           : "1px solid transparent",
       }}
     >
-      <div className="max-w-content mx-auto px-6 flex items-center justify-between h-20">
+      <div className="max-w-content mx-auto px-6 flex items-center justify-between h-24">
         {/* Logo */}
         <Link href="/" aria-label="NextPlay home" className="flex-shrink-0">
           <Image
             src="/logo.png"
             alt="NextPlay"
-            width={246}
-            height={56}
+            width={308}
+            height={70}
             priority
-            className="h-14 w-auto"
+            className="h-[70px] w-auto"
           />
         </Link>
 
