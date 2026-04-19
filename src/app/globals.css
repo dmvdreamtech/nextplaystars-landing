@@ -44,8 +44,8 @@ body {
 
 /* Orb pulse for NIKKI section */
 @keyframes orb-pulse {
-  0%, 100% { transform: scale(1);    box-shadow: 0 0 0 0  rgba(0,172,240,0.18), 0 0 28px rgba(0,172,240,0.14); }
-  50%       { transform: scale(1.03); box-shadow: 0 0 0 14px rgba(0,172,240,0),  0 0 52px rgba(0,172,240,0.26); }
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 0 0  rgba(0,172,240,0.38), 0 0 56px rgba(0,172,240,0.28); }
+  50%       { transform: scale(1.07); box-shadow: 0 0 0 26px rgba(0,172,240,0),  0 0 110px rgba(0,172,240,0.50); }
 }
 
 @keyframes ring-spin     { to { transform: rotateX(75deg) rotateY(20deg) rotate(360deg); } }

@@ -14,85 +14,94 @@ export default function MeetNikki() {
       <div className="max-w-content mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* LEFT: Orb + phone number */}
+          {/* LEFT: Orb — centerpiece */}
           <div className="flex flex-col items-center order-last lg:order-first">
 
-            {/* Orb — 2 rings, toned-down presence */}
+            {/* Orb — 4 rings, full energy */}
             <div
               aria-hidden
               style={{
                 position: "relative",
-                width: "260px",
-                height: "260px",
+                width: "380px",
+                height: "380px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                perspective: "700px",
-                marginBottom: "44px",
+                perspective: "800px",
               }}
             >
-              {/* Ambient glow behind core */}
+              {/* Ambient glow pool */}
               <div
                 style={{
                   position: "absolute",
-                  width: "130px",
-                  height: "130px",
+                  width: "200px",
+                  height: "200px",
                   borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(0,172,240,0.18) 0%, transparent 70%)",
-                  filter: "blur(12px)",
+                  background: "radial-gradient(circle, rgba(0,172,240,0.28) 0%, transparent 70%)",
+                  filter: "blur(24px)",
                 }}
               />
               {/* Core */}
               <div
                 style={{
                   position: "absolute",
-                  width: "68px",
-                  height: "68px",
+                  width: "88px",
+                  height: "88px",
                   borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(255,255,255,0.95) 0%, #00ACF0 38%, rgba(0,172,240,0.12) 68%, transparent 100%)",
-                  animation: "orb-pulse 4s ease-in-out infinite",
+                  background: "radial-gradient(circle, rgba(255,255,255,0.98) 0%, #00ACF0 36%, rgba(0,172,240,0.14) 66%, transparent 100%)",
+                  animation: "orb-pulse 3.5s ease-in-out infinite",
                   zIndex: 2,
                 }}
               />
-              {/* Ring 1 — inner, slower */}
+              {/* Ring 1 — innermost */}
               <div
                 style={{
                   position: "absolute",
-                  width: "162px",
-                  height: "162px",
+                  width: "188px",
+                  height: "188px",
                   borderRadius: "50%",
-                  border: "1px solid rgba(0,172,240,0.28)",
-                  animation: "ring-spin 16s linear infinite",
+                  border: "1.5px solid rgba(0,172,240,0.45)",
+                  animation: "ring-spin 10s linear infinite",
                   transformStyle: "preserve-3d",
                 }}
               />
-              {/* Ring 2 — outer, even slower */}
+              {/* Ring 2 */}
               <div
                 style={{
                   position: "absolute",
-                  width: "228px",
-                  height: "228px",
+                  width: "256px",
+                  height: "256px",
                   borderRadius: "50%",
-                  border: "1px solid rgba(0,172,240,0.13)",
-                  animation: "ring-spin-rev 26s linear infinite",
+                  border: "1px solid rgba(0,172,240,0.28)",
+                  animation: "ring-spin-rev 16s linear infinite",
+                  transformStyle: "preserve-3d",
+                }}
+              />
+              {/* Ring 3 */}
+              <div
+                style={{
+                  position: "absolute",
+                  width: "318px",
+                  height: "318px",
+                  borderRadius: "50%",
+                  border: "1px solid rgba(0,172,240,0.16)",
+                  animation: "ring-spin 23s linear infinite",
+                  transformStyle: "preserve-3d",
+                }}
+              />
+              {/* Ring 4 — outermost */}
+              <div
+                style={{
+                  position: "absolute",
+                  width: "372px",
+                  height: "372px",
+                  borderRadius: "50%",
+                  border: "1px solid rgba(0,172,240,0.08)",
+                  animation: "ring-spin-rev 32s linear infinite",
                   transformStyle: "preserve-3d",
                 }}
               />
             </div>
-
-            {/* Phone number */}
-            <p
-              className="font-display text-[#00ACF0]"
-              style={{ fontSize: "clamp(28px, 3vw, 40px)", fontWeight: 700, letterSpacing: "-0.01em", lineHeight: 1 }}
-            >
-              (240) 913-8592
-            </p>
-            <p
-              className="font-body text-white/35"
-              style={{ fontSize: "13px", marginTop: "10px", letterSpacing: "0.04em" }}
-            >
-              Call or text N.I.K.K.I. anytime
-            </p>
           </div>
 
           {/* RIGHT: Content */}
@@ -125,7 +134,7 @@ export default function MeetNikki() {
                 marginBottom: "40px",
               }}
             >
-              N.I.K.K.I. handles the recruiting work: coach outreach, X posts, calendar updates, and answers when you have questions. Real AI, built for one job.
+              Call N.I.K.K.I. anytime. Ask any recruiting question and get real-time advice from a recruiting assistant that knows your athlete, your target schools, and where you are in the process.
             </p>
 
             {/* Use-case chips — 2-column grid */}
