@@ -65,23 +65,15 @@ export default function BuiltByCoach() {
           <div style={{ marginTop: "48px", textAlign: "center" }}>
             <a
               href="/about"
-              className="font-body inline-flex items-center gap-3 transition-all duration-150"
+              className="cta-ghost font-body inline-flex items-center gap-3"
               style={{
                 fontSize: "16px",
                 fontWeight: 600,
                 color: "#00ACF0",
-                border: "1.5px solid rgba(0,172,240,0.45)",
+                border: "1.5px solid",
                 borderRadius: "10px",
                 padding: "14px 32px",
                 textDecoration: "none",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "rgba(0,172,240,0.06)";
-                (e.currentTarget as HTMLElement).style.borderColor = "#00ACF0";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "transparent";
-                (e.currentTarget as HTMLElement).style.borderColor = "rgba(0,172,240,0.45)";
               }}
             >
               Meet the coach who built this
