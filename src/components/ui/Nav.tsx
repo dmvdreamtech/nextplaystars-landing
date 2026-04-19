@@ -10,6 +10,7 @@ const navLinks = [
   { label: "The Reality", href: "#reality" },
   { label: "How It Works", href: "#how" },
   { label: "Meet N.I.K.K.I.", href: "#nikki" },
+  { label: "About", href: "#founder" },
   { label: "Pricing", href: "#pricing" },
 ];
 
