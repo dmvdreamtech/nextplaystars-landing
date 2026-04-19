@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ paddingTop: "96px", paddingBottom: "80px" }}
+      style={{ paddingTop: "112px", paddingBottom: "80px" }}
       aria-label="Hero"
     >
       <div
