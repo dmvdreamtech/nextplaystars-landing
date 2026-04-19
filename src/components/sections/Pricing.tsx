@@ -6,7 +6,8 @@ const tiers = [
     price: "$39",
     athletes: "1 athlete",
     features: [
-      "Call N.I.K.K.I.: 15 minutes of calls per month",
+      "Call N.I.K.K.I.: 15 minutes per month",
+      "Chat with N.I.K.K.I. on web: unlimited",
       "Coach emails: 25/month",
       "Recruiting reports: 1/month",
       "Target schools: up to 5",
@@ -24,7 +25,8 @@ const tiers = [
     athletes: "Up to 2 athletes",
     features: [
       "Everything in Starter, plus:",
-      "Call N.I.K.K.I.: 45 minutes of calls per month",
+      "Call N.I.K.K.I.: 45 minutes per month",
+      "Chat with N.I.K.K.I. on web: unlimited",
       "Coach emails: 75/month",
       "Recruiting reports: 1 per week",
       "Target schools: up to 10",
@@ -42,6 +44,7 @@ const tiers = [
     features: [
       "Everything in Pro, plus:",
       "Call N.I.K.K.I.: unlimited calls",
+      "Chat with N.I.K.K.I. on web: unlimited",
       "Coach emails: unlimited",
       "Recruiting reports: on-demand, unlimited",
       "Target schools: unlimited",
