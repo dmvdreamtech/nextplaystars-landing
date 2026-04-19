@@ -5,6 +5,7 @@ import RecruitingReality from "@/components/sections/RecruitingReality";
 import MeetNikki from "@/components/sections/MeetNikki";
 import HowItWorks from "@/components/sections/HowItWorks";
 import BuiltByCoach from "@/components/sections/BuiltByCoach";
+import Pricing from "@/components/sections/Pricing";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <MeetNikki />
         <HowItWorks />
         <BuiltByCoach />
-        {/* Section 6: Pricing */}
+        <Pricing />
         {/* Section 7: Final CTA */}
       </main>
       <Footer />

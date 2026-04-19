@@ -71,6 +71,23 @@ body {
   border-color: #00ACF0;
 }
 
+/* Pricing CTA buttons */
+.pricing-cta-solid {
+  background: #00ACF0;
+  transition: background 150ms ease;
+}
+.pricing-cta-solid:hover { background: #0099D8; }
+
+.pricing-cta-outline {
+  background: transparent;
+  border: 1.5px solid rgba(0, 172, 240, 0.45);
+  transition: background 150ms ease, border-color 150ms ease;
+}
+.pricing-cta-outline:hover {
+  background: rgba(0, 172, 240, 0.08);
+  border-color: #00ACF0;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up { animation: none; opacity: 1; transform: none; }
