@@ -53,31 +53,31 @@ export default function MeetNikki() {
                   zIndex: 2,
                 }}
               />
-              {/* Ring 1 — innermost */}
+              {/* Ring 1 — innermost, clockwise */}
               <div
                 style={{
                   position: "absolute",
                   width: "188px",
                   height: "188px",
                   borderRadius: "50%",
-                  border: "1.5px solid rgba(0,172,240,0.45)",
-                  animation: "ring-spin 10s linear infinite",
+                  border: "1.5px solid rgba(0,172,240,0.55)",
+                  animation: "ring-spin 6s linear infinite",
                   transformStyle: "preserve-3d",
                 }}
               />
-              {/* Ring 2 */}
+              {/* Ring 2 — counter-clockwise */}
               <div
                 style={{
                   position: "absolute",
                   width: "256px",
                   height: "256px",
                   borderRadius: "50%",
-                  border: "1px solid rgba(0,172,240,0.28)",
-                  animation: "ring-spin-rev 16s linear infinite",
+                  border: "1px solid rgba(0,172,240,0.38)",
+                  animation: "ring-spin-rev 10s linear infinite",
                   transformStyle: "preserve-3d",
                 }}
               />
-              {/* Ring 3 */}
+              {/* Ring 3 — clockwise */}
               <div
                 style={{
                   position: "absolute",
@@ -85,11 +85,11 @@ export default function MeetNikki() {
                   height: "318px",
                   borderRadius: "50%",
                   border: "1px solid rgba(0,172,240,0.16)",
-                  animation: "ring-spin 23s linear infinite",
+                  animation: "ring-spin 14s linear infinite",
                   transformStyle: "preserve-3d",
                 }}
               />
-              {/* Ring 4 — outermost */}
+              {/* Ring 4 — outermost, counter-clockwise */}
               <div
                 style={{
                   position: "absolute",
@@ -97,11 +97,25 @@ export default function MeetNikki() {
                   height: "372px",
                   borderRadius: "50%",
                   border: "1px solid rgba(0,172,240,0.08)",
-                  animation: "ring-spin-rev 32s linear infinite",
+                  animation: "ring-spin-rev 18s linear infinite",
                   transformStyle: "preserve-3d",
                 }}
               />
             </div>
+
+            {/* Subhead under orb — centered */}
+            <p
+              className="font-body text-center"
+              style={{
+                fontSize: "16px",
+                lineHeight: 1.6,
+                color: "rgba(255,255,255,0.52)",
+                maxWidth: "420px",
+                marginTop: "36px",
+              }}
+            >
+              Call N.I.K.K.I. anytime. Ask any recruiting question and get real-time advice from a recruiting assistant that knows your athlete, your target schools, and where you are in the process.
+            </p>
           </div>
 
           {/* RIGHT: Content */}
@@ -124,18 +138,6 @@ export default function MeetNikki() {
             >
               Your recruiting assistant.<br />On it before you ask.
             </h2>
-            <p
-              className="font-body"
-              style={{
-                fontSize: "17px",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.58)",
-                maxWidth: "440px",
-                marginBottom: "40px",
-              }}
-            >
-              Call N.I.K.K.I. anytime. Ask any recruiting question and get real-time advice from a recruiting assistant that knows your athlete, your target schools, and where you are in the process.
-            </p>
 
             {/* Use-case chips — 2-column grid */}
             <div
