@@ -17,7 +17,7 @@ export default function Hero() {
       />
 
       <div className="max-w-content mx-auto px-6 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 items-start">
 
           {/* LEFT */}
           <div className="flex flex-col items-start max-w-[640px]">
@@ -111,7 +111,7 @@ export default function Hero() {
                   objectFit: "cover",
                   objectPosition: "center center",
                   display: "block",
-                  filter: "sepia(0.12) contrast(1.04) brightness(0.87)",
+                  filter: "sepia(0.17) saturate(1.05) contrast(1.04) brightness(0.87)",
                 }}
               />
             </div>
