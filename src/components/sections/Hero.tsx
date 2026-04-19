@@ -96,7 +96,7 @@ export default function Hero() {
             className="relative w-full order-first lg:order-last animate-fade-up"
             style={{ animationDelay: "80ms" }}
           >
-            <div style={{ overflow: "hidden", borderRadius: "8px", boxShadow: "0 6px 28px rgba(0,0,0,0.28), inset 0 0 50px rgba(0,0,0,0.15)" }}>
+            <div style={{ position: "relative", overflow: "hidden", borderRadius: "8px", boxShadow: "0 6px 28px rgba(0,0,0,0.28), inset 0 0 60px rgba(0,0,0,0.35)" }}>
               <img
                 src="/photos/hero-baseball-batter.jpg"
                 alt="Baseball batter in action during a high school game"
@@ -104,9 +104,19 @@ export default function Hero() {
                   width: "100%",
                   aspectRatio: "4/5",
                   objectFit: "cover",
-                  objectPosition: "center center",
+                  objectPosition: "center 20%",
                   display: "block",
-                  filter: "sepia(0.12) contrast(1.04) brightness(0.82)",
+                  filter: "sepia(0.25) saturate(0.85) contrast(1.04) brightness(0.75)",
+                }}
+              />
+              {/* Navy tint overlay — pulls photo toward page aesthetic */}
+              <div
+                aria-hidden
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background: "rgba(15,27,46,0.15)",
+                  pointerEvents: "none",
                 }}
               />
             </div>
