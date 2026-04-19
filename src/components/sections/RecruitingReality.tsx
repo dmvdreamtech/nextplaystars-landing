@@ -13,7 +13,8 @@ const items = [
     body: "A serious recruiting effort means personalized outreach to 50\u2013100 coaches, multiple follow-ups, video updates, profile maintenance, phone calls, social posts, and campus visits. Most families underestimate the work by an order of magnitude.",
     photo: "/photos/parent-phone.jpg",
     photoAlt: "Parent working through recruiting outreach on their phone",
-    photoPosition: "0% center",
+    photoPosition: "center center",
+    photoAspect: "11/6",
   },
   {
     num: "03",
@@ -67,7 +68,7 @@ export default function RecruitingReality() {
 
         {/* Editorial blocks — photo left, number + text right */}
         <div>
-          {items.map(({ num, heading, body, photo, photoAlt, photoPosition }) => (
+          {items.map(({ num, heading, body, photo, photoAlt, photoPosition, photoAspect }) => (
             <div
               key={num}
               style={{
@@ -85,7 +86,7 @@ export default function RecruitingReality() {
                     alt={photoAlt}
                     style={{
                       width: "100%",
-                      aspectRatio: "4/3",
+                      aspectRatio: photoAspect ?? "4/3",
                       objectFit: "cover",
                       objectPosition: photoPosition,
                       display: "block",
