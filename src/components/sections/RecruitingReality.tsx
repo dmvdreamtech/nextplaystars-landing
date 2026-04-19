@@ -1,15 +1,28 @@
-const itemsWithoutPhoto = [
+const items = [
+  {
+    num: "01",
+    heading: "Coaches aren\u2019t looking for your athlete.",
+    body: "A D1 coach manages hundreds of recruits. Your athlete isn\u2019t in their database. Families who get recruited are the ones who put themselves in front of the right coaches \u2014 persistently, professionally, and over years. Waiting for an invitation is a strategy that doesn\u2019t work.",
+    photo: "/photos/pallotti-game.jpg",
+    photoAlt: "Athlete competing in a high school game",
+  },
   {
     num: "02",
-    heading: "It's not one email. It's hundreds.",
-    body: "A serious recruiting effort means personalized outreach to 50–100 coaches, multiple follow-ups, video updates, profile maintenance, phone calls, social posts, and campus visits. Most families underestimate the work by an order of magnitude.",
+    heading: "It\u2019s not one email. It\u2019s hundreds.",
+    body: "A serious recruiting effort means personalized outreach to 50\u2013100 coaches, multiple follow-ups, video updates, profile maintenance, phone calls, social posts, and campus visits. Most families underestimate the work by an order of magnitude.",
+    photo: "/photos/parent-phone.jpg",
+    photoAlt: "Parent working through recruiting outreach on their phone",
   },
   {
     num: "03",
-    heading: "The window closes before most families realize it's open.",
-    body: "Division I programs fill verbal commitments years before signing day. The athletes who get those offers started early — sophomore year, sometimes earlier. If you're waiting until junior year to think seriously about recruiting, you are already behind.",
+    heading: "The window closes before most families realize it\u2019s open.",
+    body: "Division I programs fill verbal commitments years before signing day. The athletes who get those offers started early \u2014 sophomore year, sometimes earlier. If you\u2019re waiting until junior year to think seriously about recruiting, you are already behind.",
+    photo: "/photos/hero-softball-pitcher.jpg",
+    photoAlt: "Softball pitcher mid-throw during a high school game",
   },
 ];
+
+const photoFilter = "sepia(0.12) contrast(1.04) brightness(0.87)";
 
 export default function RecruitingReality() {
   return (
@@ -49,134 +62,78 @@ export default function RecruitingReality() {
           </h2>
         </div>
 
-        {/* Editorial blocks */}
+        {/* Editorial blocks — photo left, number + text right */}
         <div>
-
-          {/* Item 01 — Option A mockup: photo left, number + text right */}
-          <div
-            style={{
-              paddingTop: "44px",
-              paddingBottom: "44px",
-              borderTop: "1px solid rgba(15,27,46,0.12)",
-            }}
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-10 lg:gap-16 items-start">
-
-              {/* Photo — left column */}
-              <div style={{ overflow: "hidden", borderRadius: "3px" }}>
-                <img
-                  src="/photos/coach-sideline.jpg"
-                  alt="Coach watching from the sideline during a high school game"
-                  style={{
-                    width: "100%",
-                    aspectRatio: "4/3",
-                    objectFit: "cover",
-                    display: "block",
-                    filter: "sepia(0.12) contrast(1.04) brightness(0.87)",
-                  }}
-                />
-              </div>
-
-              {/* Number + text — right column */}
-              <div>
-                <span
-                  className="font-display"
-                  style={{
-                    fontSize: "clamp(56px, 6vw, 88px)",
-                    fontWeight: 300,
-                    color: "rgba(15,27,46,0.12)",
-                    lineHeight: 1,
-                    letterSpacing: "-0.02em",
-                    display: "block",
-                    marginBottom: "16px",
-                    userSelect: "none",
-                  }}
-                  aria-hidden
-                >
-                  01
-                </span>
-                <h3
-                  className="font-display"
-                  style={{
-                    fontSize: "clamp(20px, 2.2vw, 28px)",
-                    fontWeight: 700,
-                    color: "#0F1B2E",
-                    marginBottom: "14px",
-                    lineHeight: 1.2,
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  Coaches aren&apos;t looking for your athlete.
-                </h3>
-                <p
-                  className="font-body"
-                  style={{
-                    fontSize: "16px",
-                    lineHeight: 1.75,
-                    color: "rgba(15,27,46,0.62)",
-                    maxWidth: "520px",
-                  }}
-                >
-                  A D1 coach manages hundreds of recruits. Your athlete isn&apos;t in their database. Families who get recruited are the ones who put themselves in front of the right coaches — persistently, professionally, and over years. Waiting for an invitation is a strategy that doesn&apos;t work.
-                </p>
-              </div>
-
-            </div>
-          </div>
-
-          {/* Items 02 and 03 — original layout unchanged */}
-          {itemsWithoutPhoto.map(({ num, heading, body }) => (
+          {items.map(({ num, heading, body, photo, photoAlt }) => (
             <div
               key={num}
-              className="flex flex-col sm:grid sm:items-start"
               style={{
-                gridTemplateColumns: "72px 1fr",
-                gap: "40px",
                 paddingTop: "44px",
                 paddingBottom: "44px",
                 borderTop: "1px solid rgba(15,27,46,0.12)",
               }}
             >
-              <span
-                className="font-display"
-                style={{
-                  fontSize: "clamp(40px, 5vw, 72px)",
-                  fontWeight: 300,
-                  color: "rgba(15,27,46,0.15)",
-                  lineHeight: 1,
-                  letterSpacing: "-0.02em",
-                  userSelect: "none",
-                  marginBottom: "8px",
-                }}
-                aria-hidden
-              >
-                {num}
-              </span>
-              <div>
-                <h3
-                  className="font-display"
-                  style={{
-                    fontSize: "clamp(20px, 2.2vw, 28px)",
-                    fontWeight: 700,
-                    color: "#0F1B2E",
-                    marginBottom: "14px",
-                    lineHeight: 1.2,
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  {heading}
-                </h3>
-                <p
-                  className="font-body"
-                  style={{
-                    fontSize: "16px",
-                    lineHeight: 1.75,
-                    color: "rgba(15,27,46,0.62)",
-                    maxWidth: "600px",
-                  }}
-                >
-                  {body}
-                </p>
+              <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-10 lg:gap-16 items-start">
+
+                {/* Photo — left column */}
+                <div style={{ overflow: "hidden", borderRadius: "3px" }}>
+                  <img
+                    src={photo}
+                    alt={photoAlt}
+                    style={{
+                      width: "100%",
+                      aspectRatio: "4/3",
+                      objectFit: "cover",
+                      display: "block",
+                      filter: photoFilter,
+                    }}
+                  />
+                </div>
+
+                {/* Number + text — right column */}
+                <div>
+                  <span
+                    className="font-display"
+                    style={{
+                      fontSize: "clamp(56px, 6vw, 88px)",
+                      fontWeight: 300,
+                      color: "rgba(15,27,46,0.12)",
+                      lineHeight: 1,
+                      letterSpacing: "-0.02em",
+                      display: "block",
+                      marginBottom: "16px",
+                      userSelect: "none",
+                    }}
+                    aria-hidden
+                  >
+                    {num}
+                  </span>
+                  <h3
+                    className="font-display"
+                    style={{
+                      fontSize: "clamp(20px, 2.2vw, 28px)",
+                      fontWeight: 700,
+                      color: "#0F1B2E",
+                      marginBottom: "14px",
+                      lineHeight: 1.2,
+                      letterSpacing: "-0.01em",
+                    }}
+                  >
+                    {heading}
+                  </h3>
+                  <p
+                    className="font-body"
+                    style={{
+                      fontSize: "16px",
+                      lineHeight: 1.75,
+                      color: "rgba(15,27,46,0.62)",
+                      maxWidth: "520px",
+                    }}
+                  >
+                    {body}
+                  </p>
+                </div>
+
               </div>
             </div>
           ))}
