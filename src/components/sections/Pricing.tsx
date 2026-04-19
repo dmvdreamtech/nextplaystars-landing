@@ -45,7 +45,6 @@ const tiers = [
       "Coach emails: unlimited",
       "Recruiting reports: on-demand, unlimited",
       "Target schools: unlimited",
-      "Instagram automation (when live)",
       "Priority support",
     ],
     popular: false,
