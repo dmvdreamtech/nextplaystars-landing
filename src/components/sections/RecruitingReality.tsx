@@ -5,6 +5,7 @@ const items = [
     body: "A D1 coach manages hundreds of recruits. Your athlete isn\u2019t in their database. Families who get recruited are the ones who put themselves in front of the right coaches \u2014 persistently, professionally, and over years. Waiting for an invitation is a strategy that doesn\u2019t work.",
     photo: "/photos/pallotti-game.jpg",
     photoAlt: "Athlete competing in a high school game",
+    photoPosition: "center center",
   },
   {
     num: "02",
@@ -12,6 +13,7 @@ const items = [
     body: "A serious recruiting effort means personalized outreach to 50\u2013100 coaches, multiple follow-ups, video updates, profile maintenance, phone calls, social posts, and campus visits. Most families underestimate the work by an order of magnitude.",
     photo: "/photos/parent-phone.jpg",
     photoAlt: "Parent working through recruiting outreach on their phone",
+    photoPosition: "20% center",
   },
   {
     num: "03",
@@ -19,6 +21,7 @@ const items = [
     body: "Division I programs fill verbal commitments years before signing day. The athletes who get those offers started early \u2014 sophomore year, sometimes earlier. If you\u2019re waiting until junior year to think seriously about recruiting, you are already behind.",
     photo: "/photos/hero-softball-pitcher.jpg",
     photoAlt: "Softball pitcher mid-throw during a high school game",
+    photoPosition: "center 20%",
   },
 ];
 
@@ -64,7 +67,7 @@ export default function RecruitingReality() {
 
         {/* Editorial blocks — photo left, number + text right */}
         <div>
-          {items.map(({ num, heading, body, photo, photoAlt }) => (
+          {items.map(({ num, heading, body, photo, photoAlt, photoPosition }) => (
             <div
               key={num}
               style={{
@@ -84,6 +87,7 @@ export default function RecruitingReality() {
                       width: "100%",
                       aspectRatio: "4/3",
                       objectFit: "cover",
+                      objectPosition: photoPosition,
                       display: "block",
                       filter: photoFilter,
                     }}
