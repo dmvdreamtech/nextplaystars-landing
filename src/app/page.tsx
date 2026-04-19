@@ -1,5 +1,7 @@
 import Nav from "@/components/ui/Nav";
 import Hero from "@/components/sections/Hero";
+import RecruitingReality from "@/components/sections/RecruitingReality";
+import MeetNikki from "@/components/sections/MeetNikki";
 
 export default function Home() {
   return (
@@ -7,7 +9,12 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        {/* Sections 2–7 will be added after Hero is approved */}
+        <RecruitingReality />
+        {/* Section 3: How NextPlay Works — coming next */}
+        <MeetNikki />
+        {/* Section 5: Built by a coach */}
+        {/* Section 6: Pricing */}
+        {/* Section 7: Final CTA */}
       </main>
     </>
   );
