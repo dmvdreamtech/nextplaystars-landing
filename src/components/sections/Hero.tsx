@@ -21,7 +21,6 @@ export default function Hero() {
 
           {/* LEFT */}
           <div className="flex flex-col items-start max-w-[640px]">
-            {/* Sport tag — signals audience immediately */}
             <div
               className="inline-flex items-center font-body animate-fade-up"
               style={{
@@ -91,41 +90,178 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT: Hero photo */}
+          {/* RIGHT: Sport photo + N.I.K.K.I. chat panel */}
           <div
-            className="relative w-full order-first lg:order-last animate-fade-up"
-            style={{ animationDelay: "80ms" }}
+            className="relative w-full order-first lg:order-last animate-fade-up flex flex-col"
+            style={{ animationDelay: "80ms", gap: "20px" }}
           >
+
+            {/* Sport photo */}
             <div style={{
-              position: "relative",
               overflow: "hidden",
               borderRadius: "8px",
-              aspectRatio: "4/5",
-              background: "#0F1B2E",
-              boxShadow: "0 6px 28px rgba(0,0,0,0.28), inset 0 0 60px rgba(0,0,0,0.35)",
+              boxShadow: "0 6px 28px rgba(0,0,0,0.28), inset 0 0 50px rgba(0,0,0,0.15)",
             }}>
               <img
-                src="/photos/hero-baseball-batter.jpg"
-                alt="Baseball batter in action during a high school game"
+                src="/photos/firefly-action.jpg"
+                alt="High school softball game in action"
                 style={{
                   width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
+                  aspectRatio: "16/9",
+                  objectFit: "cover",
+                  objectPosition: "center center",
                   display: "block",
-                  filter: "sepia(0.35) saturate(0.7) contrast(1.04) brightness(0.65)",
-                }}
-              />
-              {/* Navy tint overlay — pulls photo toward page aesthetic */}
-              <div
-                aria-hidden
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background: "rgba(15,27,46,0.15)",
-                  pointerEvents: "none",
+                  filter: "sepia(0.12) contrast(1.04) brightness(0.87)",
                 }}
               />
             </div>
+
+            {/* N.I.K.K.I. chat panel */}
+            <div
+              className="relative w-full rounded-2xl overflow-hidden flex flex-col"
+              style={{ background: "linear-gradient(155deg, #0d1f38 0%, #0F1B2E 60%, #0a1422 100%)" }}
+            >
+              {/* Background swoosh */}
+              <svg
+                aria-hidden
+                viewBox="0 0 480 600"
+                fill="none"
+                className="absolute inset-0 w-full h-full"
+                preserveAspectRatio="xMidYMid slice"
+              >
+                <path d="M-60 480 C80 320, 280 200, 540 80" stroke="rgba(0,172,240,0.12)" strokeWidth="1.5" fill="none" />
+                <ellipse cx="420" cy="80" rx="160" ry="160" fill="url(#hero-conv-glow)" />
+                <defs>
+                  <radialGradient id="hero-conv-glow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#00ACF0" stopOpacity="0.10" />
+                    <stop offset="100%" stopColor="#00ACF0" stopOpacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+
+              {/* Header bar */}
+              <div
+                className="relative flex items-center gap-3 px-6 py-4 flex-shrink-0"
+                style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}
+              >
+                <div
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "50%",
+                    background: "linear-gradient(135deg, #00ACF0 0%, #0077b6 100%)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
+                >
+                  <span className="font-display text-white" style={{ fontSize: "13px", fontWeight: 700 }}>N</span>
+                </div>
+                <div>
+                  <p className="font-body text-white" style={{ fontSize: "14px", fontWeight: 600, lineHeight: 1 }}>N.I.K.K.I.</p>
+                  <p className="font-body text-[#00ACF0]" style={{ fontSize: "11px", marginTop: "3px" }}>● Active now</p>
+                </div>
+                <div className="ml-auto">
+                  <p className="font-body text-white/20" style={{ fontSize: "10px", letterSpacing: "0.08em", textTransform: "uppercase" }}>NextPlay</p>
+                </div>
+              </div>
+
+              {/* Messages */}
+              <div className="relative flex flex-col justify-center flex-1 px-6 py-8 gap-4">
+                <p
+                  className="font-body text-white/20 text-center"
+                  style={{ fontSize: "10px", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "4px" }}
+                >
+                  Today · 3:42 PM
+                </p>
+
+                {/* Parent bubble */}
+                <div className="flex justify-end">
+                  <div
+                    className="font-body text-white"
+                    style={{
+                      background: "rgba(0,172,240,0.18)",
+                      border: "1px solid rgba(0,172,240,0.25)",
+                      borderRadius: "18px 18px 4px 18px",
+                      padding: "12px 16px",
+                      maxWidth: "80%",
+                      fontSize: "15px",
+                      lineHeight: 1.45,
+                    }}
+                  >
+                    Peyton just hit a home run at the showcase.
+                  </div>
+                </div>
+
+                {/* N.I.K.K.I. bubble */}
+                <div className="flex items-end gap-2">
+                  <div
+                    style={{
+                      width: "28px",
+                      height: "28px",
+                      borderRadius: "50%",
+                      background: "linear-gradient(135deg, #00ACF0 0%, #0077b6 100%)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      marginBottom: "2px",
+                    }}
+                  >
+                    <span className="font-display text-white" style={{ fontSize: "10px", fontWeight: 700 }}>N</span>
+                  </div>
+                  <div>
+                    <p className="font-body text-white/30" style={{ fontSize: "11px", marginBottom: "5px" }}>N.I.K.K.I.</p>
+                    <div
+                      className="font-body text-white/85"
+                      style={{
+                        background: "rgba(255,255,255,0.06)",
+                        border: "1px solid rgba(255,255,255,0.08)",
+                        borderRadius: "4px 18px 18px 18px",
+                        padding: "12px 16px",
+                        fontSize: "15px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      I&apos;ll draft updates to your target coach list for your approval.{" "}
+                      <span style={{ color: "#00ACF0" }}>Calendar updated</span> with her next tournament.
+                    </div>
+                  </div>
+                </div>
+
+                {/* Input bar */}
+                <div
+                  className="flex items-center gap-3 mt-auto"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    borderRadius: "24px",
+                    padding: "11px 18px",
+                    marginTop: "20px",
+                  }}
+                >
+                  <p className="font-body text-white/20 flex-1" style={{ fontSize: "14px" }}>Message N.I.K.K.I…</p>
+                  <div
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      borderRadius: "50%",
+                      background: "#00ACF0",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
+                      <path d="M2 6h8M6 2l4 4-4 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
