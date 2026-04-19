@@ -169,7 +169,7 @@ export default function MeetNikki() {
             </div>
 
             {/* Team photo — subtle anchor */}
-            <div style={{ overflow: "hidden", borderRadius: "8px", marginBottom: "20px", opacity: 0.45, boxShadow: "0 6px 28px rgba(0,0,0,0.28), inset 0 0 50px rgba(0,0,0,0.15)" }}>
+            <div style={{ overflow: "hidden", borderRadius: "8px", marginBottom: "20px", opacity: 0.65, boxShadow: "0 6px 28px rgba(0,0,0,0.28), inset 0 0 50px rgba(0,0,0,0.15)" }}>
               <img
                 src="/photos/dmv-dream-team.jpg"
                 alt=""
@@ -179,7 +179,7 @@ export default function MeetNikki() {
                   aspectRatio: "16/6",
                   objectFit: "cover",
                   display: "block",
-                  filter: "grayscale(0.5) brightness(0.75)",
+                  filter: "grayscale(0.4) brightness(0.92)",
                 }}
               />
             </div>

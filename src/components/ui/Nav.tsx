@@ -6,9 +6,17 @@ import Link from "next/link";
 
 const APP_URL = "https://www.nextplayrecruiting.app";
 
+const navLinks = [
+  { label: "The Reality", href: "#reality" },
+  { label: "How It Works", href: "#how" },
+  { label: "Meet N.I.K.K.I.", href: "#nikki" },
+  { label: "Pricing", href: "#pricing" },
+];
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -16,13 +24,27 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+    );
+    navLinks.forEach(({ href }) => {
+      const el = document.getElementById(href.slice(1));
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled
-          ? "rgba(15,27,46,0.92)"
-          : "rgba(15,27,46,0.75)",
+        background: scrolled ? "rgba(15,27,46,0.92)" : "rgba(15,27,46,0.75)",
         backdropFilter: "blur(16px)",
         WebkitBackdropFilter: "blur(16px)",
         borderBottom: scrolled
@@ -31,6 +53,7 @@ export default function Nav() {
       }}
     >
       <div className="max-w-content mx-auto px-6 flex items-center justify-between h-24">
+
         {/* Logo */}
         <Link href="/" aria-label="NextPlay home" className="flex-shrink-0">
           <Image
@@ -43,7 +66,33 @@ export default function Nav() {
           />
         </Link>
 
-        {/* Desktop links */}
+        {/* Desktop anchor links */}
+        <div className="hidden md:flex items-center gap-1">
+          {navLinks.map(({ label, href }) => {
+            const isActive = activeSection === href.slice(1);
+            return (
+              <a
+                key={href}
+                href={href}
+                className={`font-body relative px-4 py-2 rounded-lg transition-colors duration-150 text-sm ${
+                  isActive
+                    ? "text-[#00ACF0] font-semibold"
+                    : "text-white/60 font-medium hover:text-white"
+                }`}
+              >
+                {label}
+                {isActive && (
+                  <span
+                    aria-hidden
+                    className="absolute bottom-[2px] left-4 right-4 h-[2px] rounded-sm bg-[#00ACF0]"
+                  />
+                )}
+              </a>
+            );
+          })}
+        </div>
+
+        {/* Desktop auth buttons */}
         <div className="hidden md:flex items-center gap-2">
           <a
             href={APP_URL}
@@ -87,10 +136,19 @@ export default function Nav() {
           className="md:hidden flex flex-col gap-1 px-6 pb-5 pt-2"
           style={{ borderTop: "1px solid rgba(255,255,255,0.08)", background: "rgba(15,27,46,0.98)" }}
         >
-          <a href="#how" onClick={() => setMenuOpen(false)} className="text-white/80 py-2.5 text-base font-medium hover:text-white">How It Works</a>
-          <a href="#nikki" onClick={() => setMenuOpen(false)} className="text-white/80 py-2.5 text-base font-medium hover:text-white">Meet N.I.K.K.I.</a>
-          <a href="#pricing" onClick={() => setMenuOpen(false)} className="text-white/80 py-2.5 text-base font-medium hover:text-white">Pricing</a>
-          <a href={APP_URL} className="text-white/60 py-2.5 text-base font-medium hover:text-white">Sign In</a>
+          {navLinks.map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              onClick={() => setMenuOpen(false)}
+              className="text-white/80 py-2.5 text-base font-medium hover:text-white"
+            >
+              {label}
+            </a>
+          ))}
+          <a href={APP_URL} className="text-white/60 py-2.5 text-base font-medium hover:text-white">
+            Sign In
+          </a>
           <a
             href={`${APP_URL}/signup`}
             className="mt-2 text-center text-base font-semibold text-ink bg-[#00ACF0] py-3 rounded-lg"
