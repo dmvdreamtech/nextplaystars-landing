@@ -96,15 +96,15 @@ export default function Hero() {
             className="relative w-full order-first lg:order-last animate-fade-up"
             style={{ animationDelay: "80ms" }}
           >
-            <div style={{ overflow: "hidden", borderRadius: "4px" }}>
+            <div style={{ overflow: "hidden", borderRadius: "8px", boxShadow: "0 6px 28px rgba(0,0,0,0.28), inset 0 0 50px rgba(0,0,0,0.15)" }}>
               <img
-                src="/photos/hero-softball-pitcher.jpg"
-                alt="Softball pitcher in action during a high school game"
+                src="/photos/hero-baseball-batter.jpg"
+                alt="Baseball batter in action during a high school game"
                 style={{
                   width: "100%",
                   aspectRatio: "4/5",
                   objectFit: "cover",
-                  objectPosition: "center top",
+                  objectPosition: "center center",
                   display: "block",
                   filter: "sepia(0.12) contrast(1.04) brightness(0.82)",
                 }}

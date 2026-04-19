@@ -80,7 +80,7 @@ export default function RecruitingReality() {
               <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-10 lg:gap-16 items-start">
 
                 {/* Photo — left column */}
-                <div style={{ overflow: "hidden", borderRadius: "3px" }}>
+                <div style={{ overflow: "hidden", borderRadius: "8px", boxShadow: "0 6px 28px rgba(15,27,46,0.18), inset 0 0 50px rgba(0,0,0,0.12)" }}>
                   <img
                     src={photo}
                     alt={photoAlt}
