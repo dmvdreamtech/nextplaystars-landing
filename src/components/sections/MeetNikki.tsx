@@ -168,6 +168,20 @@ export default function MeetNikki() {
               ))}
             </div>
 
+            {/* Acronym explanation */}
+            <p
+              className="font-body"
+              style={{
+                fontSize: "12px",
+                color: "rgba(255,255,255,0.35)",
+                fontStyle: "italic",
+                marginBottom: "20px",
+                marginTop: "-4px",
+              }}
+            >
+              N.I.K.K.I. stands for Neural Intelligence for Knowledge, Kinetics &amp; Innovation.
+            </p>
+
             {/* Team photo — subtle anchor */}
             <div style={{ overflow: "hidden", borderRadius: "8px", marginBottom: "20px", opacity: 0.65, boxShadow: "0 6px 28px rgba(0,0,0,0.28), inset 0 0 50px rgba(0,0,0,0.15)" }}>
               <img

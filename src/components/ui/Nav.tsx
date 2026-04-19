@@ -8,8 +8,8 @@ const APP_URL = "https://www.nextplayrecruiting.app";
 
 const navLinks = [
   { label: "The Reality", href: "#reality" },
-  { label: "How It Works", href: "#how" },
   { label: "Meet N.I.K.K.I.", href: "#nikki" },
+  { label: "How It Works", href: "#how" },
   { label: "About", href: "#founder" },
   { label: "Pricing", href: "#pricing" },
 ];

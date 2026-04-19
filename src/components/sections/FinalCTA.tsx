@@ -5,22 +5,23 @@ export default function FinalCTA() {
     <section
       id="get-started"
       style={{
-        background: "#0F1B2E",
+        background: "#F5F0E8",
         padding: "120px 0 136px",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        borderTop: "1px solid rgba(15,27,46,0.10)",
       }}
     >
       <div className="max-w-content mx-auto px-6">
         <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
 
           <h2
-            className="font-display text-white"
+            className="font-display"
             style={{
               fontSize: "clamp(28px, 3vw, 40px)",
               fontWeight: 700,
               lineHeight: 1.15,
               letterSpacing: "-0.02em",
               marginBottom: "24px",
+              color: "#0F1B2E",
             }}
           >
             Give your athlete the recruiting effort she deserves.
@@ -31,7 +32,7 @@ export default function FinalCTA() {
             style={{
               fontSize: "17px",
               lineHeight: 1.7,
-              color: "rgba(255,255,255,0.52)",
+              color: "rgba(15,27,46,0.58)",
               marginBottom: "44px",
             }}
           >

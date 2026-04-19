@@ -2,7 +2,7 @@ export default function BuiltByCoach() {
   return (
     <section
       id="founder"
-      style={{ background: "#F5F0E8", padding: "96px 0", borderTop: "1px solid rgba(15,27,46,0.10)" }}
+      style={{ background: "#0F1B2E", padding: "96px 0", borderTop: "1px solid rgba(255,255,255,0.06)" }}
     >
       <div className="max-w-content mx-auto px-6">
         <div style={{ maxWidth: "720px", margin: "0 auto" }}>
@@ -28,7 +28,7 @@ export default function BuiltByCoach() {
             style={{
               fontSize: "clamp(32px, 3.5vw, 44px)",
               fontWeight: 700,
-              color: "#0F1B2E",
+              color: "#ffffff",
               lineHeight: 1.1,
               letterSpacing: "-0.02em",
               marginBottom: "32px",
@@ -40,7 +40,7 @@ export default function BuiltByCoach() {
           {/* Body */}
           <div
             style={{
-              borderTop: "1px solid rgba(15,27,46,0.12)",
+              borderTop: "1px solid rgba(255,255,255,0.08)",
               paddingTop: "32px",
               display: "flex",
               flexDirection: "column",
@@ -49,7 +49,7 @@ export default function BuiltByCoach() {
           >
             <p
               className="font-body"
-              style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(15,27,46,0.72)" }}
+              style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(255,255,255,0.60)" }}
             >
               NextPlay was built by the head varsity softball coach at St. Vincent Pallotti High School and 2025 Conference Coach of the Year. He is also president of{" "}
               <a
@@ -65,13 +65,13 @@ export default function BuiltByCoach() {
             </p>
             <p
               className="font-body"
-              style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(15,27,46,0.72)" }}
+              style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(255,255,255,0.60)" }}
             >
               After years of watching talented athletes get missed because their families didn&apos;t know the recruiting game, he built the platform he wished every family had.
             </p>
             <p
               className="font-body"
-              style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(15,27,46,0.72)" }}
+              style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(255,255,255,0.60)" }}
             >
               The founding families of NextPlay are real softball and baseball families recruiting right now, across positions, graduation years, and target divisions. We built this for them first. Now we&apos;re building it for you.
             </p>
