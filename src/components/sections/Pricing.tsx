@@ -5,35 +5,67 @@ const tiers = [
     name: "Starter",
     price: "$39",
     athletes: "1 athlete",
-    description:
-      "Full recruiting platform, N.I.K.K.I. access, recruiting plan, coach outreach, and X post automation.",
+    features: [
+      "N.I.K.K.I. voice: 15 min/month",
+      "Coach emails: 25/month",
+      "Recruiting reports: 1/month",
+      "Target schools: 25",
+      "Calendar management",
+      "No social media automation",
+    ],
     popular: false,
+    travel: false,
+    cta: "Start Free Trial",
+    href: `${APP_URL}/signup`,
   },
   {
     name: "Pro",
     price: "$59",
     athletes: "Up to 2 athletes",
-    description:
-      "Same full platform for families with multiple kids in the pipeline.",
+    features: [
+      "Everything in Starter, plus:",
+      "N.I.K.K.I. voice: 45 min/month",
+      "Coach emails: 75/month",
+      "Recruiting reports: 4/month (weekly refresh)",
+      "Target schools: 75",
+      "Social media automation (X posts, scheduled updates)",
+    ],
     popular: true,
+    travel: false,
+    cta: "Start Free Trial",
+    href: `${APP_URL}/signup`,
   },
   {
     name: "Elite",
     price: "$75",
     athletes: "Up to 3 athletes",
-    description:
-      "Everything in Pro, for families managing three active recruiting efforts.",
+    features: [
+      "Everything in Pro, plus:",
+      "N.I.K.K.I. voice: unlimited (fair use)",
+      "Coach emails: unlimited (fair use)",
+      "Recruiting reports: on-demand, unlimited",
+      "Target schools: unlimited",
+      "Instagram automation (when live)",
+      "Priority support",
+    ],
     popular: false,
+    travel: false,
+    cta: "Start Free Trial",
+    href: `${APP_URL}/signup`,
   },
   {
-    name: "Family",
-    price: "$99",
-    athletes: "Up to 5 athletes",
-    description:
-      "For large families, travel organization director households, and multi-sport families managing a full roster of recruiting athletes.",
+    name: "Travel Program",
+    price: null,
+    athletes: "For travel organizations, clubs & multi-athlete programs (5+ athletes)",
+    features: [
+      "Custom pricing for organizations managing multiple recruits. Includes director dashboards, bulk family onboarding, and co-branded outreach.",
+    ],
     popular: false,
+    travel: true,
+    cta: "Contact Us",
+    href: "mailto:support@nextplaystars.com",
   },
-];
+] as const;
 
 export default function Pricing() {
   return (
@@ -72,7 +104,7 @@ export default function Pricing() {
               marginBottom: "16px",
             }}
           >
-            Simple pricing. One athlete or up to five.
+            Simple pricing. From one athlete to entire travel programs.
           </h2>
           <p
             className="font-body"
@@ -86,28 +118,25 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Cards */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "20px",
-            alignItems: "stretch",
-          }}
-        >
-          {tiers.map(({ name, price, athletes, description, popular }) => (
+        {/* Cards — 4-up on desktop, 1-up on mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 items-stretch">
+          {tiers.map(({ name, price, athletes, features, popular, travel, cta, href }) => (
             <div
               key={name}
               style={{
                 position: "relative",
-                background: popular
+                background: travel
+                  ? "rgba(255,255,255,0.02)"
+                  : popular
                   ? "rgba(0,172,240,0.07)"
                   : "rgba(255,255,255,0.03)",
-                border: popular
+                border: travel
+                  ? "1px solid rgba(255,255,255,0.10)"
+                  : popular
                   ? "1.5px solid rgba(0,172,240,0.55)"
                   : "1px solid rgba(255,255,255,0.08)",
                 borderRadius: "16px",
-                padding: "32px 28px",
+                padding: "28px 24px",
                 display: "flex",
                 flexDirection: "column",
               }}
@@ -144,36 +173,50 @@ export default function Pricing() {
                   fontWeight: 600,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: popular ? "#00ACF0" : "rgba(255,255,255,0.45)",
+                  color: popular
+                    ? "#00ACF0"
+                    : travel
+                    ? "rgba(255,255,255,0.38)"
+                    : "rgba(255,255,255,0.45)",
                   marginBottom: "12px",
                 }}
               >
                 {name}
               </p>
 
-              {/* Price */}
-              <div style={{ marginBottom: "6px" }}>
-                <span
-                  className="font-display text-white"
-                  style={{ fontSize: "42px", fontWeight: 700, lineHeight: 1 }}
+              {/* Price or contact */}
+              {price ? (
+                <div style={{ marginBottom: "6px" }}>
+                  <span
+                    className="font-display text-white"
+                    style={{ fontSize: "38px", fontWeight: 700, lineHeight: 1 }}
+                  >
+                    {price}
+                  </span>
+                  <span
+                    className="font-body"
+                    style={{ fontSize: "14px", color: "rgba(255,255,255,0.38)", marginLeft: "5px" }}
+                  >
+                    /month
+                  </span>
+                </div>
+              ) : (
+                <p
+                  className="font-body text-white"
+                  style={{ fontSize: "17px", fontWeight: 600, marginBottom: "6px" }}
                 >
-                  {price}
-                </span>
-                <span
-                  className="font-body"
-                  style={{ fontSize: "14px", color: "rgba(255,255,255,0.38)", marginLeft: "6px" }}
-                >
-                  /month
-                </span>
-              </div>
+                  Contact for pricing
+                </p>
+              )}
 
-              {/* Athletes */}
+              {/* Athletes / subhead */}
               <p
                 className="font-body"
                 style={{
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  color: "rgba(255,255,255,0.55)",
+                  fontSize: "12px",
+                  fontWeight: travel ? 400 : 600,
+                  color: travel ? "rgba(255,255,255,0.40)" : "rgba(255,255,255,0.50)",
+                  lineHeight: 1.5,
                   marginBottom: "20px",
                   paddingBottom: "20px",
                   borderBottom: "1px solid rgba(255,255,255,0.07)",
@@ -182,36 +225,57 @@ export default function Pricing() {
                 {athletes}
               </p>
 
-              {/* Description */}
-              <p
-                className="font-body"
-                style={{
-                  fontSize: "14px",
-                  lineHeight: 1.65,
-                  color: "rgba(255,255,255,0.52)",
-                  flexGrow: 1,
-                  marginBottom: "28px",
-                }}
-              >
-                {description}
-              </p>
+              {/* Features */}
+              <div style={{ flexGrow: 1, marginBottom: "24px" }}>
+                {travel ? (
+                  <p
+                    className="font-body"
+                    style={{ fontSize: "13px", lineHeight: 1.7, color: "rgba(255,255,255,0.48)" }}
+                  >
+                    {features[0]}
+                  </p>
+                ) : (
+                  <ul style={{ display: "flex", flexDirection: "column", gap: "9px", listStyle: "none", padding: 0, margin: 0 }}>
+                    {features.map((f) => (
+                      <li
+                        key={f}
+                        className="font-body"
+                        style={{
+                          fontSize: "13px",
+                          lineHeight: 1.5,
+                          color: f.startsWith("Everything")
+                            ? "rgba(255,255,255,0.35)"
+                            : "rgba(255,255,255,0.62)",
+                          display: "flex",
+                          gap: "8px",
+                        }}
+                      >
+                        {!f.startsWith("Everything") && (
+                          <span style={{ color: "#00ACF0", flexShrink: 0, marginTop: "1px" }}>•</span>
+                        )}
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
 
               {/* CTA */}
               <a
-                href={`${APP_URL}/signup`}
-                className={`font-body ${popular ? "pricing-cta-solid" : "pricing-cta-outline"}`}
+                href={href}
+                className={`font-body ${popular ? "pricing-cta-solid" : travel ? "pricing-cta-outline" : "pricing-cta-outline"}`}
                 style={{
                   display: "block",
                   textAlign: "center",
-                  fontSize: "15px",
+                  fontSize: "14px",
                   fontWeight: 600,
-                  padding: "13px 20px",
+                  padding: "12px 16px",
                   borderRadius: "10px",
                   textDecoration: "none",
                   color: popular ? "#0F1B2E" : "#00ACF0",
                 }}
               >
-                Start Free Trial
+                {cta}
               </a>
             </div>
           ))}
