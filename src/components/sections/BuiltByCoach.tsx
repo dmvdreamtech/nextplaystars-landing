@@ -61,7 +61,7 @@ export default function BuiltByCoach() {
             </p>
           </div>
 
-          {/* CTA */}
+          {/* CTA — restore when /about page is built
           <div style={{ marginTop: "48px", textAlign: "center" }}>
             <a
               href="/about"
@@ -82,6 +82,7 @@ export default function BuiltByCoach() {
               </svg>
             </a>
           </div>
+          */}
 
         </div>
       </div>

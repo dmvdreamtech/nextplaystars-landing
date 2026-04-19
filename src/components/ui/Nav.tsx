@@ -11,7 +11,6 @@ const navLinks = [
   { label: "How It Works", href: "#how" },
   { label: "Meet N.I.K.K.I.", href: "#nikki" },
   { label: "Pricing", href: "#pricing" },
-  { label: "About the Coach", href: "/about" },
 ];
 
 export default function Nav() {
