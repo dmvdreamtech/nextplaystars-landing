@@ -185,7 +185,7 @@ export default function MeetNikki() {
             {/* Team photo — subtle anchor */}
             <div style={{ overflow: "hidden", borderRadius: "8px", marginBottom: "20px", opacity: 0.65, boxShadow: "0 6px 28px rgba(0,0,0,0.28), inset 0 0 50px rgba(0,0,0,0.15)" }}>
               <img
-                src="/photos/dmv-dream-team.jpg"
+                src="/photos/team-action.jpg"
                 alt=""
                 aria-hidden
                 style={{

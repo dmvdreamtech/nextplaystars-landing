@@ -51,17 +51,7 @@ export default function BuiltByCoach() {
               className="font-body"
               style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(255,255,255,0.60)" }}
             >
-              NextPlay was built by the head varsity softball coach at St. Vincent Pallotti High School and 2025 Conference Coach of the Year. He is also president of{" "}
-              <a
-                href="https://www.dmvdreamsoftball.com/our-staff"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="dmv-link"
-                style={{ color: "#00ACF0", textDecoration: "none" }}
-              >
-                DMV Dream Athletics
-              </a>
-              , where he leads the competitive softball program alongside other youth programs.
+              NextPlay was built by the head varsity softball coach at St. Vincent Pallotti High School and 2025 Conference Coach of the Year. He also leads a competitive youth softball program with players across age groups.
             </p>
             <p
               className="font-body"
@@ -73,7 +63,7 @@ export default function BuiltByCoach() {
               className="font-body"
               style={{ fontSize: "17px", lineHeight: 1.75, color: "rgba(255,255,255,0.60)" }}
             >
-              The founding families of NextPlay are real softball and baseball families recruiting right now, across positions, graduation years, and target divisions. We built this for them first. Now we&apos;re building it for you.
+              NextPlay&apos;s early users are real softball and baseball families recruiting right now, across positions, graduation years, and target divisions. We built this for them first. Now we&apos;re building it for you.
             </p>
           </div>
 
